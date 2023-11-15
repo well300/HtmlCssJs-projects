@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Blog</title>
+</head>
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family:Arial, sans-serif;
+}
+
+header{
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+}
+
+main{
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+article{
+  border-bottom: 1px solid #ddd;
+}
+
+h2{
+  color: #333;
+}
+
+.post-meta{
+  color: #777;
+}
+
+#comment-section{
+  margin-top: 10px;
+}
+
+#comment-container{
+  margin-top: 10px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+footer{
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 3px;
+}
+  </style>
+<body>
+<header>
+  <h1>My Blog</h1>
+</header>
+<main>
+  <article id="post-container">
+  <h2>Blog Post Title</h2>
+  <p class="post-meta">Published on Jan 1, 2024</p>
+  <p>Watch 'Nuvvunte Naa Jathagaa' from 1- Manoharudu' a painful love ballad sung by Sid Sriram & Isshrathquadhre. AR Rahman takes Ramajogayya Shastry's heart tugging lyrics and adds his melancholic magic to the number. The song is all about a lover wanting nothing but his lady love to be by his side.</p>
+  </article>
+  <section id="comment-section">
+    <h3>Comments: </h3>
+    <div id="comment-container">
+    <form id="comment-form"><!--------------->
+    
+    <label for="comment">Add a comment:</label> 
+    <textarea id="comment" rows="4" cols="50"></textarea>
+    <button type="button" onclick="addComment()">Post Comment</button>
+ 
+ </form><!--------------->
+    </div>
+  </section>
+</main>
+<footer>
+  <p>
+  &copy; 2023 My Blog
+  </p>
+</footer>
+  <script>
+    function addComment(){
+const commentText =  document.getElementById('comment').value;
+if(commentText.trim() !== ''){
+const commentContainer = 
+document.getElementById('comment-container');
+
+const newComment = 
+document.createElement('div');
+newComment.className = 'comment'
+newComment.textContant = commentText;
+
+commentContainer.appendChild(newComment);
+
+document.getElementbyId('comment-form').rest();
+}
+}
+  </script>
+</body>
+</html>
